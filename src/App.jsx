@@ -10,7 +10,7 @@ function App() {
     <>
       <Navbar />
       <Hero imgSrc="https://i.ibb.co/FDfKjb0/Vector.png" />
-      <div className="flex flex-col gap-20">
+      <div className="flex flex-col gap-20 overflow-hidden">
         <Stack />
         <Projects />
         <Footer />

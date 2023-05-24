@@ -1,8 +1,9 @@
 import { StackCard } from "./StackCard";
+import { Slide } from "react-awesome-reveal";
 
 export function Stack() {
   return (
-    <>
+    <Slide fraction={0} triggerOnce={true} direction="left" delay={1500}>
       <div className="lg:w-2/3 w-5/6 mx-auto pt-20 lg:pt-0">
         <div className=" flex flex-col gap-10">
           <h1 className="text-5xl font-bold">Technologies</h1>
@@ -38,6 +39,6 @@ export function Stack() {
           </div>
         </div>
       </div>
-    </>
+    </Slide>
   );
 }

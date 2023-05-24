@@ -1,8 +1,10 @@
 import { ProjectCard } from "./ProjectCard";
+import { Slide } from "react-awesome-reveal";
 
 export function Projects() {
+  let isVisible = false;
   return (
-    <>
+    <Slide fraction={0} triggerOnce={true} direction="right" delay={1500}>
       <div className="lg:w-2/3 w-5/6 mx-auto pt-20 lg:pt-0">
         <div className=" flex flex-col gap-10">
           <h1 className="text-5xl font-bold">Projects</h1>
@@ -30,6 +32,6 @@ export function Projects() {
           </div>
         </div>
       </div>
-    </>
+    </Slide>
   );
 }
