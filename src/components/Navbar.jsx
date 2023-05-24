@@ -1,6 +1,27 @@
+import { useState, useEffect } from "react";
+
 export function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-base-100 shadow">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-10 shadow transition-all duration-300 ${
+        isScrolled ? "backdrop-blur-sm" : "bg-base-100"
+      }`}
+    >
       <div className="navbar lg:w-2/3 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -22,7 +43,7 @@ export function Navbar() {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-300 rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 bg-primary text-white"
             >
               <li>
                 <a>About</a>

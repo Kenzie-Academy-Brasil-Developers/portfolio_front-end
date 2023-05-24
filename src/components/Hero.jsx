@@ -1,9 +1,9 @@
 import { Fade } from "react-awesome-reveal";
 import { JackInTheBox } from "react-awesome-reveal";
 
-export function Hero({ imgSrc }) {
+export function Hero() {
   return (
-    <div className="hero min-h-screen lg:w-2/3 w-5/6 mx-auto pt-20 lg:pt-0 lg:mb-10 mb-0">
+    <div className="hero min-h-screen lg:w-2/3 w-5/6 mx-auto py-20">
       <div className="hero-content flex flex-col gap-20">
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="flex flex-col gap-3 lg:row-start-1">
@@ -21,7 +21,10 @@ export function Hero({ imgSrc }) {
             </Fade>
           </div>
           <JackInTheBox delay={1000} triggerOnce={true}>
-            <img src={imgSrc} className="col-start-1 lg:col-start-2" />
+            <img
+              src="https://i.ibb.co/FDfKjb0/Vector.png"
+              className="col-start-1 lg:col-start-2"
+            />
           </JackInTheBox>
         </div>
         <Fade duration={3000} delay={1000} triggerOnce={true}>
