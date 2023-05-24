@@ -10,7 +10,7 @@ import { SiTailwindcss } from "react-icons/si";
 export function Stack() {
   return (
     <Slide fraction={0} triggerOnce={true} direction="left" delay={1000}>
-      <div className="lg:w-2/3 w-5/6 mx-auto">
+      <div id="stack" className=" lg:w-2/3 w-5/6 mx-auto py-20">
         <div className=" flex flex-col gap-10 items-start">
           <h1 className="text-5xl font-bold">Technologies</h1>
           <div className="grid lg:grid-cols-4 grid-cols-1 gap-5 w-full">

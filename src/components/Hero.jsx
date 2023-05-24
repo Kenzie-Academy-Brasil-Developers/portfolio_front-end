@@ -3,7 +3,7 @@ import { JackInTheBox } from "react-awesome-reveal";
 
 export function Hero() {
   return (
-    <div className="hero min-h-screen lg:w-2/3 w-5/6 mx-auto py-20">
+    <div id="about" className="hero min-h-screen lg:w-2/3 w-5/6 mx-auto py-20">
       <div className="hero-content flex flex-col gap-20">
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="flex flex-col gap-3 lg:row-start-1">
@@ -15,9 +15,13 @@ export function Hero() {
                 experiences while leveling up in the world of front-end
                 development.
               </p>
-              <button className="btn btn-primary btn-sm rounded-xl px-8 w-fit text-white">
+              <a
+                href="https://www.linkedin.com/in/guchierrez/"
+                target="_blank"
+                className="btn btn-primary btn-sm rounded-xl px-8 w-fit text-white"
+              >
                 Learn more
-              </button>
+              </a>
             </Fade>
           </div>
           <JackInTheBox delay={1000} triggerOnce={true}>
