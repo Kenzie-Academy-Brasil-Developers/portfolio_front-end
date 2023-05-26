@@ -75,7 +75,7 @@ export function Contact() {
       </div>
       <form
         onSubmit={sendEmail}
-        className="w-4/6 xl:w-1/2 md:h-auto h-screen p-4 flex flex-col gap-3 m-auto justify-center"
+        className="w-5/6 sm:w-4/6 xl:w-1/2 md:h-auto h-screen p-4 flex flex-col gap-3 m-auto justify-center"
       >
         <div className="form-control md:w-full w-5/6 mx-auto">
           <label className="label font-marlinge">
@@ -115,13 +115,13 @@ export function Contact() {
           Send
         </button>
         <ul className="absolute bottom-20 md:bottom-10 right-1/2 md:right-1/4 translate-x-1/2 flex gap-4">
-          <FooterIcon>
+          <FooterIcon link="https://wa.me/5541991012722">
             <SiWhatsapp className="text-2xl" />
           </FooterIcon>
-          <FooterIcon>
+          <FooterIcon link="https://www.linkedin.com/in/guchierrez/">
             <SiLinkedin className="text-2xl" />
           </FooterIcon>
-          <FooterIcon>
+          <FooterIcon link="https://github.com/guchierrez">
             <SiGithub className="text-2xl" />
           </FooterIcon>
         </ul>

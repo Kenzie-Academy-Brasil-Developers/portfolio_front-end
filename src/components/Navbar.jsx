@@ -7,10 +7,9 @@ export function Navbar() {
   const [isOnProjects, setIsOnProjects] = useState(false);
   const [isOnContact, setIsOnContact] = useState(false);
   const [isNavbarVisible, setNavbarVisible] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   useEffect(() => {
-    let prevScrollPos = window.pageYOffset;
-
     const handleScroll = () => {
       const scrolledComponent = document.elementFromPoint(
         window.innerWidth / 2,
@@ -19,10 +18,10 @@ export function Navbar() {
       const componentId = scrolledComponent?.id;
 
       const currentScrollPos = window.pageYOffset;
-      const isScrolledDown = prevScrollPos < currentScrollPos;
+      const isScrolledDown = prevScrollPos > currentScrollPos;
 
-      setNavbarVisible(isScrolledDown || currentScrollPos < 10);
-      prevScrollPos = currentScrollPos;
+      setNavbarVisible(!isScrolledDown || currentScrollPos < 100);
+      setPrevScrollPos(currentScrollPos);
 
       console.log(componentId);
 
@@ -62,8 +61,10 @@ export function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
 
   function handleMobileNavbar(targetElement) {
     function hideDropdownMenu() {
@@ -83,10 +84,10 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-10 shadow transition-all duration-300 ${
+      className={`fixed left-0 right-0 z-10 shadow transition-all duration-300 md:-top-0 ${
         isScrolled ? "backdrop-blur-sm" : "bg-base-100"
       } ${isOnContact ? "opacity-0" : ""} ${
-        isNavbarVisible ? "-top-full sm:top-auto" : ""
+        isNavbarVisible ? "-top-full" : "top-0"
       }`}
     >
       <div className="navbar md:w-2/3 mx-auto">
@@ -115,7 +116,7 @@ export function Navbar() {
             <ul
               id="dropdown-menu"
               tabIndex={0}
-              className="menu menu-compact mt-3 dropdown-content p-2 shadow w-52 bg-base-300 rounded-none"
+              className="menu menu-compact mt-3 dropdown-content p-2 shadow border w-52 bg-base-100 text-white border-white/30 rounded-none font-marlinge"
             >
               <li>
                 <a
@@ -148,7 +149,7 @@ export function Navbar() {
                   Projects
                 </a>
               </li>
-              <li>
+              <li className="border-b border-base-100">
                 <a
                   onClick={() => {
                     const targetElement = document.querySelector("#contact");
