@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.11.0",
     "daisyui": "^2.51.6",
+    "emailjs-com": "^3.2.0",
+    "lottie": "^0.0.1",
+    "lottie-react": "^2.4.0",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.2.3",
     "react-dom": "^18.2.0",
@@ -19,6 +23,7 @@
     "react-parallax-tilt": "^1.7.141"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.0.1",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react-swc": "^3.0.0",

@@ -1,5 +1,5 @@
 import { StackCard } from "./StackCard";
-import { Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import { SiHtml5, SiReact } from "react-icons/si";
 import { SiCss3 } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
@@ -9,35 +9,41 @@ import { SiTailwindcss } from "react-icons/si";
 
 export function Stack() {
   return (
-    <Slide fraction={0} triggerOnce={true} direction="left" delay={1000}>
-      <div id="stack" className=" lg:w-2/3 w-5/6 mx-auto pt-20 lg:my-20 my-0">
-        <div className=" flex flex-col gap-10 items-start">
-          <h1 className="text-5xl font-bold">Technologies</h1>
-          <div className="grid lg:grid-cols-4 grid-cols-1 gap-5 w-full">
+    <div
+      id="stack"
+      className="w-5/6 md:min-h-screen mx-auto pt-20 my-20 relative"
+    >
+      <div className="flex flex-col gap-10 w-full">
+        <h1 className=" md:text-5xl sm:text-3xl text-xl w-fit font-marlinge text-primary-content bg-primary p-4">
+          TECHNOLOGIES
+        </h1>
+        <Fade triggerOnce={true} delay={1000}></Fade>
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-5 w-full">
+          <Fade cascade damping={0.1} triggerOnce={true} delay={1000}>
             <StackCard technology="HTML">
-              <SiHtml5 />
+              <SiHtml5 className="fill-current" />
             </StackCard>
             <StackCard technology="CSS">
-              <SiCss3 />
+              <SiCss3 className="fill-current" />
             </StackCard>
             <StackCard technology="JavaScript">
-              <SiJavascript />
+              <SiJavascript className="fill-current" />
             </StackCard>
             <StackCard technology="React.js">
-              <SiReact />
+              <SiReact className="fill-current" />
             </StackCard>
             <StackCard technology="Git">
-              <SiGit />
+              <SiGit className="fill-current" />
             </StackCard>
             <StackCard technology="SASS">
-              <SiSass />
+              <SiSass className="fill-current" />
             </StackCard>
             <StackCard technology="Tailwind CSS">
-              <SiTailwindcss />
+              <SiTailwindcss className="fill-current" />
             </StackCard>
-          </div>
+          </Fade>
         </div>
       </div>
-    </Slide>
+    </div>
   );
 }
