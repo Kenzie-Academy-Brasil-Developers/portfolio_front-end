@@ -101,7 +101,7 @@ export function Contact({ isLanguageSet }) {
             data-textarea
           ></textarea>
         </div>
-        <button className="w-1/2 mx-auto rounded-none my-4">
+        <button className="btn btn-primary w-1/2 mx-auto rounded-none my-4">
           {`${isLanguageSet ? "Enviar" : "Send"}`}
         </button>
         <ul className="absolute bottom-20 md:bottom-10 right-1/2 md:right-1/4 translate-x-1/2 flex gap-4">
