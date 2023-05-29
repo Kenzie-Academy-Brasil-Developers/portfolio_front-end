@@ -7,6 +7,7 @@ export function ProjectElement({
   opposite,
   live,
   code,
+  isLanguageSet,
 }) {
   return (
     <Slide
@@ -21,8 +22,10 @@ export function ProjectElement({
       >
         <img src={imgSrc} className="md:relative md:w-96 xl:w-5/12" />
         <div
-          className={`bg-base-300 h-fit w-fit p-4 md:w-1/2 xl:w-1/3 md:p-10 md:absolute ${
-            opposite ? "md:right-72 xl:right-96" : "md:left-72 xl:left-96"
+          className={`bg-base-300 h-full lg:h-fit w-fit p-4 md:w-1/2 xl:w-1/3 md:p-10 md:absolute ${
+            opposite
+              ? "md:right-80 lg:right-72 xl:right-96"
+              : "md:left-80 lg:left-72 xl:left-96"
           } md:self-center`}
         >
           <h3 className="text-xl xl:text-2xl font-marlinge text-primary py-2">
@@ -35,7 +38,7 @@ export function ProjectElement({
               href={code}
               className="btn btn-primary btn-sm lg:btn-md rounded-none"
             >
-              See code
+              {`${isLanguageSet ? "Ver código" : "See code"}`}
             </a>
             <a
               target="_blank"
