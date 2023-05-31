@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { GiBrazilFlag } from "react-icons/gi";
-import { FaFlagUsa } from "react-icons/fa";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 export function Navbar({ isLanguageSet, setLanguage }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,7 +9,16 @@ export function Navbar({ isLanguageSet, setLanguage }) {
   const [isOnContact, setIsOnContact] = useState(false);
   const [isNavbarVisible, setNavbarVisible] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    (async () => {
+      await delay(1500);
+      setLoading(false);
+    })();
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,6 +75,10 @@ export function Navbar({ isLanguageSet, setLanguage }) {
     };
   }, [prevScrollPos]);
 
+  useEffect(() => {
+    document.body.classList.toggle("overflow-hidden", isLoading);
+  }, [isLoading]);
+
   function handleMobileNavbar(targetElement) {
     function hideDropdownMenu() {
       const dropdownButton = document.querySelector("#dropdown-btn");
@@ -85,18 +97,16 @@ export function Navbar({ isLanguageSet, setLanguage }) {
 
   function handleCheckboxChange() {
     setLoading(true);
-    setTimeout(() => {
-      setLanguage((prevLanguage) => !prevLanguage);
-    }, 1500); // Change the timeout duration to 1.5 seconds (1500 milliseconds)
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }
 
-  useEffect(() => {
-    const body = document.querySelector("body");
-    body.classList.toggle("overflow-hidden", isLoading);
-  }, [isLoading]);
+    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    (async () => {
+      await delay(1500);
+      setLanguage((prevLanguage) => !prevLanguage);
+      await delay(1500);
+      setLoading(false);
+    })();
+  }
 
   return (
     <>
@@ -237,8 +247,8 @@ export function Navbar({ isLanguageSet, setLanguage }) {
                 type="checkbox"
               />
 
-              <GiBrazilFlag className=" text-5xl swap-off" />
-              <FaFlagUsa className=" text-3xl place-self-center swap-on" />
+              <span className="swap-off fi fi-br text-3xl"></span>
+              <span className="swap-on fi fi-us text-3xl"></span>
             </label>
           </div>
         </div>
