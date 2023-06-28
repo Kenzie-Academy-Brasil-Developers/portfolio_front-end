@@ -5,7 +5,10 @@ import { SiCss3 } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
 import { SiGit } from "react-icons/si";
 import { SiSass } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
+import { SiPostgresql } from "react-icons/si";
+import { SiBootstrap } from "react-icons/si";
 
 export function Stack({ isLanguageSet }) {
   return (
@@ -29,6 +32,9 @@ export function Stack({ isLanguageSet }) {
             <StackCard technology="JavaScript">
               <SiJavascript className="fill-current text-8xl" />
             </StackCard>
+            <StackCard technology="TypeScript">
+              <SiTypescript className="fill-current text-8xl" />
+            </StackCard>
             <StackCard technology="React.js">
               <SiReact className="fill-current text-8xl" />
             </StackCard>
@@ -40,6 +46,12 @@ export function Stack({ isLanguageSet }) {
             </StackCard>
             <StackCard technology="Tailwind CSS">
               <SiTailwindcss className="fill-current text-8xl" />
+            </StackCard>
+            <StackCard technology="Bootstrap">
+              <SiBootstrap className="fill-current text-8xl" />
+            </StackCard>
+            <StackCard technology="PostgreSQL">
+              <SiPostgresql className="fill-current text-8xl" />
             </StackCard>
           </Fade>
         </div>

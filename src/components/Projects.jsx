@@ -24,28 +24,28 @@ export function Projects({ isLanguageSet }) {
             isLanguageSet={isLanguageSet}
           />
           <ProjectElement
-            name="ELDER SCROLLS CHARACTER GENERATOR"
+            name="DEV HUB"
             description={`${
               isLanguageSet
-                ? "Esta é uma ferramenta de geração de personagens para o mundo de Elder Scrolls. Com base no playstyle preferido, o Chat GPT gera um personagem único. O projeto foi escrito em JavaScript e CSS puro."
-                : "This is an Elder Scrolls character generator tool that allows you to create a character based on your choice of character and playstyle. It was built using ChatGPTs API and coded from scratch using vanilla JavaScript and CSS."
+                ? "Esta é uma aplicação full-stack que consiste em uma plataforma onde desenvolvedores conseguem criar sua conta e registrar as tecnologias que usam para o trabalho e associar um nível de fluência à mesma. Este aplicativo apresenta React Hooks e bibliotecas como: UseContext, React Router DOM, React Form, ZOD, etc."
+                : "This is a fullstack platform that allows users to sign up and register the technologies they use for their work and how profficient they are at it. This app features advanced React Hooks and libraries such as: UseContext, React Router DOM, React Form, ZOD, etc."
             }`}
-            imgSrc="https://i.postimg.cc/YS6gmp9t/project2.jpg"
-            live="https://guchierrez.github.io/elderscrolls-chargen/"
-            code="https://github.com/guchierrez/elderscrolls-chargen"
+            imgSrc="https://i.postimg.cc/FHy11DxR/project3.jpg"
+            live="https://react-entrega-kenzie-hub-marcelino-gutierrez.vercel.app/"
+            code="https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-kenzie-hub_marcelino-gutierrez"
             opposite={true}
             isLanguageSet={isLanguageSet}
           />
           <ProjectElement
-            name="ALEMÃO ACABAMENTOS LANDING PAGE"
+            name="DEV BURGER"
             description={`${
               isLanguageSet
-                ? "Esta é uma landing page criada para a Alemão Acabamentos, um negócio local em minha cidade. A página exibe os produtos, uma breve descrição da empresa e informações de contato, como número de telefone e horário de funcionamento."
-                : "This project is a landing page created for Alemão Acabamentos, a local business in my city. The page showcases their products, a brief description of the company, and contact information such as phone number and operating hours."
+                ? "Este projeto é um aplicativo que possui uma loja de alimentos e um carrinho dentro de um modal que calcula o preço total e mostra todos os itens selecionados. Este projeto conta com React Hooks essenciais, como UseState e UseEffect."
+                : "This project is an app that features a food shop and a cart inside a modal that calculates the total price and showcases all the selected items. This project features essential React Hooks such as UseState and UseEffect."
             }`}
-            imgSrc="https://i.postimg.cc/ZY7NNsTv/project3.jpg"
-            live="https://guchierrez.github.io/alemao-acabamentos/"
-            code="https://github.com/guchierrez/alemao-acabamentos"
+            imgSrc="https://i.postimg.cc/15N819nD/project2.jpg"
+            live="https://react-entrega-s3-template-hamburgueria-marcelino-gutierrez.vercel.app/"
+            code="https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-s3-template-hamburgueria-marcelino_gutierrez"
             isLanguageSet={isLanguageSet}
           />
         </div>

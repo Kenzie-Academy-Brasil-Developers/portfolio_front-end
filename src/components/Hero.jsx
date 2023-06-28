@@ -58,7 +58,7 @@ export function Hero({ isLanguageSet, isLoading }) {
                 <img
                   style={{ width: "350px" }}
                   className="hover:scale-110 transition-all duration-1000"
-                  src="https://i.postimg.cc/W1Q6kWww/me.jpg"
+                  src="https://i.ibb.co/GpMbgKz/IMG-0165.jpg"
                 />
               </div>
               <span className="font-marlinge absolute bg-primary shadow-lg px-14 p-2 sm:p-4 text-primary-content font-bold text-xl sm:text-3xl bottom-0 transition-all duration-1000">
