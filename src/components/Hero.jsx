@@ -41,13 +41,13 @@ export function Hero({ isLanguageSet, isLoading }) {
                 <a
                   href={`${
                     isLanguageSet
-                      ? "https://guchierrez-resumee-ptbr.tiiny.site/"
-                      : "https://pdfhost.io/v/FjAa4LsHT_MARCELINO_GUTIERREZen"
+                      ? "https://drive.google.com/file/d/12zGCnoSscglY3W3b-nn49nFjbSl93Md4/view"
+                      : "https://drive.google.com/file/d/1UF4CD-zHcb5UHRjdmTqMdOgrX7IA0OWg/view"
                   }`}
                   target="_blank"
                   className="inline-flex btn btn-outline rounded-none w-fit transition-all duration-300"
                 >
-                  {isLanguageSet ? "Currículo" : "Curriculum"}
+                  {isLanguageSet ? "Currículo" : "Resumee"}
                 </a>
               </div>
             </Fade>
