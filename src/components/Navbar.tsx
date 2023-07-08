@@ -64,7 +64,7 @@ export const Navbar = ({ children }: INavbarProps) => {
             if (NavbarDrawerRef.current !== null)
               NavbarDrawerRef.current.checked = true;
           }}
-          className="menu p-4 w-80 h-full bg-base-100"
+          className="menu p-4 w-80 h-full bg-base-100 tracking-widest"
         >
           <li>
             <Link to="/">Home</Link>
