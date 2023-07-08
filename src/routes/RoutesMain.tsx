@@ -9,18 +9,24 @@ import { useContext, useEffect } from "react";
 import { MainContext } from "../provider/MainContext";
 
 export const RoutesMain = () => {
-  const { NavbarDrawerRef } = useContext(MainContext);
+  const { NavbarDrawerRef, NavbarElementRef } = useContext(MainContext);
   const location = useLocation();
 
   useEffect(() => {
-    if (NavbarDrawerRef.current !== null)
+    console.log(location.pathname);
+    if (NavbarDrawerRef.current) {
       NavbarDrawerRef.current.checked = false;
+    }
+    NavbarElementRef.current?.classList.toggle(
+      "hidden",
+      location.pathname === "/contact"
+    );
   }, [location]);
 
   return (
     <Navbar>
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/stack" element={<Stack />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />

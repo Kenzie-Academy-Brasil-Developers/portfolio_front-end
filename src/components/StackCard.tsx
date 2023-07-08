@@ -5,7 +5,7 @@ import { IStackCardProps } from "../interface";
 export const StackCard = ({ children }: IStackCardProps) => {
   return (
     <Tilt>
-      <div className="p-5 w-40 h-40 border-white/30 border-2 rounded-none flex flex-col justify-center gap-3 items-center hover:bg-primary hover:text-primary-content hover:border-primary transition-all duration-300">
+      <div className="p-5 border-white/30 border-2 rounded-none flex flex-col justify-center gap-3 items-center hover:bg-primary hover:text-primary-content hover:border-primary transition-all duration-300">
         {children}
       </div>
     </Tilt>

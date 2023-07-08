@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { HeroDivider } from "../components/HeroDivider";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -35,12 +36,19 @@ export const Home = () => {
               development.
             </p>
             <div className="flex gap-4">
-              <button className="btn btn-primary rounded-none w-fit transition-all duration-300">
+              <Link
+                to="/contact"
+                className="btn btn-primary tracking-widest rounded-none w-fit transition-all duration-300"
+              >
                 Contact
-              </button>
-              <button className="inline-flex btn btn-outline rounded-none w-fit transition-all duration-300">
+              </Link>
+              <a
+                target="_blank"
+                href="https://drive.google.com/file/d/1t3fzR-pV0FMBRi1BzNYaFHZdF7k5k9M2/view?usp=sharing"
+                className="inline-flex tracking-widest btn btn-outline rounded-none w-fit transition-all duration-300"
+              >
                 Resumee
-              </button>
+              </a>
             </div>
           </HeroDivider>
         </div>

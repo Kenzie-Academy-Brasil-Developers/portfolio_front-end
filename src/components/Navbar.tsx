@@ -7,7 +7,8 @@ interface INavbarProps {
 }
 
 export const Navbar = ({ children }: INavbarProps) => {
-  const { NavbarDrawerRef, toggleDrawer } = useContext(MainContext);
+  const { NavbarDrawerRef, NavbarElementRef, toggleDrawer } =
+    useContext(MainContext);
 
   return (
     <div className="drawer drawer-end">
@@ -18,14 +19,14 @@ export const Navbar = ({ children }: INavbarProps) => {
         className="drawer-toggle"
       />
       <div className="drawer-content flex flex-col">
-        <div className="w-full bg-base-100 shadow-lg">
+        <div ref={NavbarElementRef} className="w-full bg-base-100 shadow-lg">
           <div className="flex w-5/6 md:w-2/3 mx-auto items-center justify-between">
-            <div className="flex-1 px-2 mx-2">
+            <Link to="/">
               <img
                 className="w-10 py-2"
                 src="https://i.postimg.cc/MHMKq6v7/logo.png"
               />
-            </div>
+            </Link>
 
             <div className="flex gap-5">
               <label className="swap swap-rotate">
@@ -58,9 +59,15 @@ export const Navbar = ({ children }: INavbarProps) => {
       </div>
       <div className="drawer-side">
         <label onClick={toggleDrawer} className="drawer-overlay"></label>
-        <ul className="menu p-4 w-80 h-full bg-base-100">
+        <ul
+          onFocus={() => {
+            if (NavbarDrawerRef.current !== null)
+              NavbarDrawerRef.current.checked = true;
+          }}
+          className="menu p-4 w-80 h-full bg-base-100"
+        >
           <li>
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/stack">Technologies</Link>

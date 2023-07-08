@@ -6,7 +6,10 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { BiLogoTailwindCss } from "react-icons/bi";
 import { BiLogoHtml5 } from "react-icons/bi";
 import { BiLogoJavascript } from "react-icons/bi";
+import { BiLogoGit } from "react-icons/bi";
+import { BiLogoGithub } from "react-icons/bi";
 import { useState, useEffect } from "react";
+import { PageTitle } from "../components/PageTitle";
 
 export const Stack = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -26,8 +29,9 @@ export const Stack = () => {
           : "transition-all duration-1000"
       } mx-auto w-5/6 flex flex-col gap-12 py-10`}
     >
+      <PageTitle title="Technologies" />
       <main>
-        <div className="flex gap-4 mx-auto">
+        <div className="flex flex-wrap gap-10 mx-auto justify-center">
           <StackCard>
             <BiLogoHtml5 className="fill-current text-8xl" />
           </StackCard>
@@ -48,6 +52,12 @@ export const Stack = () => {
           </StackCard>
           <StackCard>
             <BiLogoTailwindCss className="fill-current text-8xl" />
+          </StackCard>
+          <StackCard>
+            <BiLogoGit className="fill-current text-8xl" />
+          </StackCard>
+          <StackCard>
+            <BiLogoGithub className="fill-current text-8xl" />
           </StackCard>
         </div>
       </main>
