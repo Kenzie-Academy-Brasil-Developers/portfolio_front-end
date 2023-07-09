@@ -39,7 +39,7 @@ export const ContextProvider = ({ children }: IMainContextProps) => {
     }
   };
 
-  const [translation, setTranslation] = useState<boolean>(false);
+  const [translation, setTranslation] = useState<boolean>(true);
 
   return (
     <>
