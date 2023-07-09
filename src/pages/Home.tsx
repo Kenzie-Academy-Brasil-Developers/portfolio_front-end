@@ -31,7 +31,7 @@ export const Home = () => {
             </span>
             <h1 className="text-5xl font-bold">
               {translation
-                ? "Bem vindo ao meu portifólio"
+                ? "Bem vindo ao meu portfólio"
                 : "Welcome to my portfolio"}
             </h1>
           </HeroDivider>
