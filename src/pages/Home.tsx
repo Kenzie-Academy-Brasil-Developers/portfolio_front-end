@@ -1,8 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { HeroDivider } from "../components/HeroDivider";
 import { Link } from "react-router-dom";
+import { MainContext } from "../provider/MainContext";
 
 export const Home = () => {
+  const { translation } = useContext(MainContext);
+
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -10,7 +13,7 @@ export const Home = () => {
       setLoading(false);
     }, 200);
     return () => clearTimeout(timeout);
-  });
+  }, []);
 
   return (
     <div
@@ -26,28 +29,35 @@ export const Home = () => {
             <span className="font-marlinge uppercase text-primary">
               Marcelino Gutiérrez
             </span>
-            <h1 className="text-5xl font-bold">Welcome to my portfolio</h1>
+            <h1 className="text-5xl font-bold">
+              {translation
+                ? "Bem vindo ao meu portifólio"
+                : "Welcome to my portfolio"}
+            </h1>
           </HeroDivider>
           <HeroDivider>
             <p className="py-4 text-white/70">
-              {" "}
-              Bridging languages through code, crafting captivating web
-              experiences while leveling up in the world of front-end
-              development.
+              {translation
+                ? "Conectando pessoas por meio do código, criando experiências web cativantes e evoluindo no mundo do desenvolvimento front-end."
+                : "Bridging people through code, crafting captivating web experiences while leveling up in the world of front-end development."}
             </p>
             <div className="flex gap-4">
               <Link
                 to="/contact"
                 className="btn btn-primary tracking-widest rounded-none w-fit transition-all duration-300"
               >
-                Contact
+                {translation ? "Contato" : "Contact"}
               </Link>
               <a
                 target="_blank"
-                href="https://drive.google.com/file/d/1t3fzR-pV0FMBRi1BzNYaFHZdF7k5k9M2/view?usp=sharing"
+                href={
+                  translation
+                    ? "https://drive.google.com/file/d/1GaO3vxTRBT2-ROKLYQRjXUyRdLHm3K27/view?usp=sharing"
+                    : "https://drive.google.com/file/d/1t3fzR-pV0FMBRi1BzNYaFHZdF7k5k9M2/view?usp=sharing"
+                }
                 className="inline-flex tracking-widest btn btn-outline rounded-none w-fit transition-all duration-300"
               >
-                Resumee
+                {translation ? "Currículo" : "Resumee"}
               </a>
             </div>
           </HeroDivider>
@@ -65,22 +75,46 @@ export const Home = () => {
         </div>
       </main>
       <section className="col-span-2 grid grid-cols-1 md:grid-cols-7 md:gap-10 gap-3">
-        <h2 className="text-5xl font-bold md:col-span-2">About me</h2>
-        <p className="md:col-span-5 py-4 md:py-0 text-white/70">
-          Hi! I'm <strong>Marcelino Gutierrez</strong>, a web developer based in
-          Brazil. I've been learning web development since December of 2022,
-          recently enrolled in a bootcamp in February 2023 and have made
-          significant progress in a short amount of time. I've gained a solid
-          understanding of{" "}
-          <strong>HTML, CSS, JavaScript/TypeScript, SQL</strong>, and
-          frameworks/libraries such as{" "}
-          <strong>React.js and Tailwind CSS</strong>. I believe my quick grasp
-          of new technologies can be attributed to my strong ability for
-          self-driven development and my <strong>strong work ethic</strong>. As
-          someone who is highly <strong>motivated and disciplined</strong>, I'm
-          genuinely enthusiastic about further expanding my skills and knowledge
-          in web development.
-        </p>
+        <h2 className="text-5xl font-bold md:col-span-2">
+          {" "}
+          {translation ? "Sobre mim" : "About me"}
+        </h2>
+        <>
+          {translation ? (
+            <span className="md:col-span-5 py-4 md:py-0 text-white/70">
+              Olá! Eu sou <strong>Marcelino Gutierrez</strong>, um desenvolvedor
+              web full-stack. Tenho aprendido desenvolvimento web desde o final
+              de 2022 e comecei a aprender a programar na Kenzie Academy em
+              fevereiro de 2023. Tenho feito um progresso incrível e adquiri um
+              sólido entendimento de{" "}
+              <strong>HTML, CSS, JavaScript/TypeScript, SQL</strong> e
+              frameworks/bibliotecas como{" "}
+              <strong>React.js e Tailwind CSS</strong>. Acredito que minha
+              rápida compreensão de novas tecnologias pode ser atribuída à minha
+              forte capacidade de desenvolvimento independente e minha{" "}
+              <strong>ética de trabalho</strong>. Estou genuinamente
+              entusiasmado em expandir ainda mais minhas habilidades e
+              conhecimento em desenvolvimento web.
+            </span>
+          ) : (
+            <span className="md:col-span-5 py-4 md:py-0 text-white/70">
+              Olá! Eu sou <strong>Marcelino Gutierrez</strong>, um desenvolvedor
+              web baseado no Brasil. Tenho aprendido desenvolvimento web desde o
+              final de 2022 e comecei a aprender a programar na Kenzie Academy
+              em fevereiro de 2023. Tenho feito um progresso incrível e adquiri
+              um sólido entendimento de{" "}
+              <strong>HTML, CSS, JavaScript/TypeScript, SQL</strong> e
+              frameworks/bibliotecas como{" "}
+              <strong>React.js e Tailwind CSS</strong>. Acredito que minha
+              rápida compreensão de novas tecnologias pode ser atribuída à minha
+              forte capacidade de desenvolvimento autodirigido e minha{" "}
+              <strong>sólida ética de trabalho</strong>. Como alguém altamente{" "}
+              <strong>motivado e disciplinado</strong>, estou genuinamente
+              entusiasmado em expandir ainda mais minhas habilidades e
+              conhecimento em desenvolvimento web.
+            </span>
+          )}
+        </>
       </section>
     </div>
   );

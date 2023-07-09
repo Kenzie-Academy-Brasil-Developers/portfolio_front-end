@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import { IProjectCardProps } from "../interface";
 import { Accordion } from "./Accordion";
+import { MainContext } from "../provider/MainContext";
 
 export const ProjectCard = ({
   imgSource,
@@ -11,6 +13,7 @@ export const ProjectCard = ({
   liveDemo,
   repo,
 }: IProjectCardProps) => {
+  const { translation } = useContext(MainContext);
   return (
     <div
       className={`md:flex ${
@@ -26,10 +29,16 @@ export const ProjectCard = ({
         <h3 className="uppercase tracking-widest font-semibold text-2xl xl:text-3xl font-marlinge text-primary py-2">
           {title}
         </h3>
-        <Accordion project={title} title="Description">
+        <Accordion
+          project={title}
+          title={translation ? "Descrição" : "Description"}
+        >
           <p>{description}</p>
         </Accordion>
-        <Accordion project={title} title="Technologies">
+        <Accordion
+          project={title}
+          title={translation ? "Tecnologias" : "Technologies"}
+        >
           <ul className="list-disc ml-4">
             {technologies.map((tech, index) => (
               <li key={index}>{tech}</li>
@@ -49,14 +58,14 @@ export const ProjectCard = ({
             target="_blank"
             href={repo}
           >
-            See code
+            {translation ? "Ver código" : "See code"}
           </a>
           <a
             className="btn btn-outline tracking-widest btn-sm md:btn-md rounded-none"
             target="_blank"
             href={liveDemo}
           >
-            Live demo
+            {translation ? "Ao vivo" : "Live demo"}
           </a>
         </div>
       </div>

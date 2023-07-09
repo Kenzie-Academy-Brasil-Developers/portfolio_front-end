@@ -7,9 +7,12 @@ import { FooterIcon } from "../components/FooterIcon";
 import { ContactForm } from "../components/ContactForm";
 import { Link } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { MainContext } from "../provider/MainContext";
 
 export function Contact() {
+  const { translation } = useContext(MainContext);
+
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -17,7 +20,7 @@ export function Contact() {
       setLoading(false);
     }, 200);
     return () => clearTimeout(timeout);
-  });
+  }, []);
 
   return (
     <div
@@ -31,7 +34,9 @@ export function Contact() {
           animationData={Coding}
         ></Lottie>
         <h3 className=" uppercase tracking-widest select-none text-center text-lg text-primary-content bottom-10 absolute right-1/2 translate-x-1/2">
-          Get in touch! Let's expand your business together.
+          {translation
+            ? "Entre em contato! Vamos expandir o seu negócio juntos."
+            : "Get in touch! Let's expand your business together."}
         </h3>
       </div>
 
@@ -41,7 +46,7 @@ export function Contact() {
           className="flex items-center gap-2 text-primary uppercase tracking-widest absolute top-[5%] left-0"
         >
           <BiArrowBack />
-          Return
+          {translation ? "Voltar" : "Return"}
         </Link>
         <ul className="absolute bottom-20 md:bottom-10 right-1/2 translate-x-1/2 flex gap-4">
           <FooterIcon link="https://wa.me/5541991012722">

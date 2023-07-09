@@ -8,10 +8,13 @@ import { BiLogoHtml5 } from "react-icons/bi";
 import { BiLogoJavascript } from "react-icons/bi";
 import { BiLogoGit } from "react-icons/bi";
 import { BiLogoGithub } from "react-icons/bi";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { PageTitle } from "../components/PageTitle";
+import { MainContext } from "../provider/MainContext";
 
 export const Stack = () => {
+  const { translation } = useContext(MainContext);
+
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -19,7 +22,7 @@ export const Stack = () => {
       setLoading(false);
     }, 200);
     return () => clearTimeout(timeout);
-  });
+  }, []);
 
   return (
     <div
@@ -29,9 +32,9 @@ export const Stack = () => {
           : "transition-all duration-1000"
       } mx-auto w-5/6 flex flex-col gap-12 py-10`}
     >
-      <PageTitle title="Technologies" />
+      <PageTitle title={translation ? "Tecnologias" : "Technologies"} />
       <main>
-        <div className="flex flex-wrap gap-10 mx-auto justify-center">
+        <div className="flex flex-wrap gap-5 sm:gap-10 mx-auto justify-center">
           <StackCard>
             <BiLogoHtml5 className="fill-current text-8xl" />
           </StackCard>

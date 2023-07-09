@@ -8,17 +8,21 @@ import {
   TContactFormValues,
 } from "../schema/ContactFormSchema";
 import { FormTextareaInput } from "./FormTextareaInput";
+import { ContactFormSchemaPt } from "../schema/ContactFormSchemaPt";
 
 export const ContactForm = () => {
+  const { sendEmail, translation } = useContext(MainContext);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm<TContactFormValues>({
-    resolver: zodResolver(ContactFormSchema),
+    resolver: translation
+      ? zodResolver(ContactFormSchemaPt)
+      : zodResolver(ContactFormSchema),
   });
-  const { sendEmail } = useContext(MainContext);
 
   const submit = (formData: TContactFormValues) => {
     sendEmail(formData);
@@ -36,7 +40,7 @@ export const ContactForm = () => {
         errors={errors}
         inputName="name"
         inputType="text"
-        inputPlaceholder="Name"
+        inputPlaceholder={translation ? "Nome" : "Name"}
       />
       <FormTextInput
         register={register}
@@ -49,10 +53,10 @@ export const ContactForm = () => {
         register={register}
         errors={errors}
         inputName="message"
-        inputPlaceholder="Message"
+        inputPlaceholder={translation ? "Mensagem" : "Message"}
       />
       <button className="btn btn-primary w-1/2 mx-auto rounded-none my-4 tracking-widest">
-        Send
+        {translation ? "Enviar" : "Send"}
       </button>
     </form>
   );

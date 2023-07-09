@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { createContext } from "react";
 import { TContactFormValues } from "../schema/ContactFormSchema";
 import emailjs from "@emailjs/browser";
@@ -39,10 +39,19 @@ export const ContextProvider = ({ children }: IMainContextProps) => {
     }
   };
 
+  const [translation, setTranslation] = useState<boolean>(false);
+
   return (
     <>
       <MainContext.Provider
-        value={{ sendEmail, NavbarDrawerRef, NavbarElementRef, toggleDrawer }}
+        value={{
+          sendEmail,
+          NavbarDrawerRef,
+          NavbarElementRef,
+          toggleDrawer,
+          translation,
+          setTranslation,
+        }}
       >
         {children}
       </MainContext.Provider>
