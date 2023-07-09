@@ -86,12 +86,12 @@ export const Home = () => {
               de 2022 e comecei a aprender a programar na Kenzie Academy em
               fevereiro de 2023. Tenho feito um progresso incrível e adquiri um
               sólido entendimento de
-              <strong>HTML, CSS, JavaScript/TypeScript, SQL</strong> e
+              <strong> HTML, CSS, JavaScript/TypeScript, SQL</strong> e
               frameworks/bibliotecas como
-              <strong>React.js e Tailwind CSS</strong>. Acredito que minha
+              <strong> React.js e Tailwind CSS</strong>. Acredito que minha
               rápida compreensão de novas tecnologias pode ser atribuída à minha
               forte capacidade de desenvolvimento independente e minha
-              <strong>ética de trabalho</strong>. Estou genuinamente
+              <strong> ética de trabalho</strong>. Estou genuinamente
               entusiasmado em expandir ainda mais minhas habilidades e
               conhecimento em desenvolvimento web.
             </span>
@@ -102,13 +102,13 @@ export const Home = () => {
               end of 2022 and started learning programming at Kenzie Academy in
               February 2023. I have made incredible progress and have gained a
               solid understanding of
-              <strong>HTML, CSS, JavaScript/TypeScript, SQL</strong>, and
+              <strong> HTML, CSS, JavaScript/TypeScript, SQL</strong>, and
               frameworks/libraries like
-              <strong>React.js and Tailwind CSS</strong>. I believe that my
+              <strong> React.js and Tailwind CSS</strong>. I believe that my
               quick grasp of new technologies can be attributed to my strong
               ability for self-directed learning and my
-              <strong>strong work ethic</strong>. As a highly
-              <strong>motivated and disciplined</strong> individual, I am
+              <strong> strong work ethic</strong>. As a highly
+              <strong> motivated and disciplined</strong> individual, I am
               genuinely excited to further expand my skills and knowledge in web
               development.
             </span>
