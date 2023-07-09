@@ -1,9 +1,25 @@
+import { useContext, useEffect, useState } from "react";
 import { RoutesMain } from "./routes/RoutesMain";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { MainContext } from "./provider/MainContext";
+import { Loading } from "./components/Loading";
 
 function App() {
+  const { translation } = useContext(MainContext);
+
+  const [loading, setLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    setLoading(true);
+
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timeout);
+  }, [translation]);
+
   return (
     <>
       <ToastContainer
@@ -18,7 +34,7 @@ function App() {
         pauseOnHover
         theme="dark"
       />
-      <RoutesMain />
+      {loading ? <Loading /> : <RoutesMain />}
     </>
   );
 }

@@ -7,8 +7,13 @@ interface INavbarProps {
 }
 
 export const Navbar = ({ children }: INavbarProps) => {
-  const { NavbarDrawerRef, NavbarElementRef, toggleDrawer } =
-    useContext(MainContext);
+  const {
+    NavbarDrawerRef,
+    NavbarElementRef,
+    toggleDrawer,
+    setTranslation,
+    translation,
+  } = useContext(MainContext);
 
   return (
     <div className="drawer drawer-end">
@@ -30,7 +35,14 @@ export const Navbar = ({ children }: INavbarProps) => {
 
             <div className="flex gap-5">
               <label className="swap swap-rotate">
-                <input id="language-checkbox" type="checkbox" />
+                <input
+                  onChange={(e) => {
+                    setTranslation(e.target.checked);
+                  }}
+                  checked={translation}
+                  id="language-checkbox"
+                  type="checkbox"
+                />
                 <span className="swap-off fi fi-br text-2xl"></span>
                 <span className="swap-on fi fi-us text-2xl"></span>
               </label>
@@ -70,13 +82,15 @@ export const Navbar = ({ children }: INavbarProps) => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/stack">Technologies</Link>
+            <Link to="/stack">
+              {translation ? "Tecnologias" : "Technologies"}
+            </Link>
           </li>
           <li>
-            <Link to="/projects">Projects</Link>
+            <Link to="/projects"> {translation ? "Projetos" : "Projects"}</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">{translation ? "Contato" : "Contact"}</Link>
           </li>
         </ul>
       </div>

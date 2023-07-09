@@ -13,7 +13,6 @@ export const RoutesMain = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.log(location.pathname);
     if (NavbarDrawerRef.current) {
       NavbarDrawerRef.current.checked = false;
     }

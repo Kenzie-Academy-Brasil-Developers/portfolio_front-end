@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { Dispatch, ReactNode } from "react";
 import { TContactFormValues } from "../schema/ContactFormSchema";
 
 export interface IStackCardProps {
@@ -36,6 +36,8 @@ export interface IMainContext {
   NavbarElementRef: React.RefObject<HTMLDivElement>;
   toggleDrawer: () => void;
   sendEmail: (formData: TContactFormValues) => Promise<void>;
+  translation: boolean;
+  setTranslation: Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface IMainContextProps {
