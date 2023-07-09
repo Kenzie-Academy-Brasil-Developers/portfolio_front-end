@@ -76,7 +76,6 @@ export const Home = () => {
       </main>
       <section className="col-span-2 grid grid-cols-1 md:grid-cols-7 md:gap-10 gap-3">
         <h2 className="text-5xl font-bold md:col-span-2">
-          {" "}
           {translation ? "Sobre mim" : "About me"}
         </h2>
         <>
@@ -86,32 +85,32 @@ export const Home = () => {
               web full-stack. Tenho aprendido desenvolvimento web desde o final
               de 2022 e comecei a aprender a programar na Kenzie Academy em
               fevereiro de 2023. Tenho feito um progresso incrível e adquiri um
-              sólido entendimento de{" "}
+              sólido entendimento de
               <strong>HTML, CSS, JavaScript/TypeScript, SQL</strong> e
-              frameworks/bibliotecas como{" "}
+              frameworks/bibliotecas como
               <strong>React.js e Tailwind CSS</strong>. Acredito que minha
               rápida compreensão de novas tecnologias pode ser atribuída à minha
-              forte capacidade de desenvolvimento independente e minha{" "}
+              forte capacidade de desenvolvimento independente e minha
               <strong>ética de trabalho</strong>. Estou genuinamente
               entusiasmado em expandir ainda mais minhas habilidades e
               conhecimento em desenvolvimento web.
             </span>
           ) : (
             <span className="md:col-span-5 py-4 md:py-0 text-white/70">
-              Olá! Eu sou <strong>Marcelino Gutierrez</strong>, um desenvolvedor
-              web baseado no Brasil. Tenho aprendido desenvolvimento web desde o
-              final de 2022 e comecei a aprender a programar na Kenzie Academy
-              em fevereiro de 2023. Tenho feito um progresso incrível e adquiri
-              um sólido entendimento de{" "}
-              <strong>HTML, CSS, JavaScript/TypeScript, SQL</strong> e
-              frameworks/bibliotecas como{" "}
-              <strong>React.js e Tailwind CSS</strong>. Acredito que minha
-              rápida compreensão de novas tecnologias pode ser atribuída à minha
-              forte capacidade de desenvolvimento autodirigido e minha{" "}
-              <strong>sólida ética de trabalho</strong>. Como alguém altamente{" "}
-              <strong>motivado e disciplinado</strong>, estou genuinamente
-              entusiasmado em expandir ainda mais minhas habilidades e
-              conhecimento em desenvolvimento web.
+              Hello! I am <strong>Marcelino Gutierrez</strong>, a web developer
+              based in Brazil. I have been learning web development since the
+              end of 2022 and started learning programming at Kenzie Academy in
+              February 2023. I have made incredible progress and have gained a
+              solid understanding of
+              <strong>HTML, CSS, JavaScript/TypeScript, SQL</strong>, and
+              frameworks/libraries like
+              <strong>React.js and Tailwind CSS</strong>. I believe that my
+              quick grasp of new technologies can be attributed to my strong
+              ability for self-directed learning and my
+              <strong>strong work ethic</strong>. As a highly
+              <strong>motivated and disciplined</strong> individual, I am
+              genuinely excited to further expand my skills and knowledge in web
+              development.
             </span>
           )}
         </>
