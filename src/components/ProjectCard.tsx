@@ -18,7 +18,7 @@ export const ProjectCard = ({
     <div
       className={`md:flex ${
         reverse ? "md:flex-row-reverse ml-auto" : "md:flex-row"
-      }  grid bg-[#1c1c1c] my-auto grid-cols-1 xl:w-2/3 md:h-[40rem] lg:h-[32rem]`}
+      }  grid bg-[#1c1c1c] my-auto grid-cols-1 w-full xl:w-3/4`}
     >
       <img
         className="md:max-w-xs lg:max-w-md object-cover transition-all duration-300"
@@ -54,14 +54,14 @@ export const ProjectCard = ({
         </Accordion>
         <div className="flex gap-5 my-4">
           <a
-            className="btn btn-primary tracking-widest btn-sm md:btn-md rounded-none"
+            className="btn btn-primary tracking-widest rounded-none"
             target="_blank"
             href={repo}
           >
             {translation ? "Ver código" : "See code"}
           </a>
           <a
-            className="btn btn-outline tracking-widest btn-sm md:btn-md rounded-none"
+            className="btn btn-outline tracking-widest rounded-none"
             target="_blank"
             href={liveDemo}
           >
