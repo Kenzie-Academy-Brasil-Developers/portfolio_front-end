@@ -32,13 +32,14 @@ export const Projects = () => {
             reverse={false}
             description={
               translation
-                ? "Esta é uma plataforma e-commerce para uma loja de roupas. Você pode se cadastrar como administrador e acessar a dashboard, onde é possível: criar, editar e remover itens à venda na loja."
-                : "This is an e-commerce platform for a clothing store. You are able to sign up as an administrator and login into the dashboard, where you are able to: create, edit and remove items from the shop."
+                ? "Fashion Kenzie é uma plataforma e-commerce para uma loja de roupas que foi desenvolvida como um projeto colaborativo, no qual eu desenvolvi o papel de Tech Lead, encarregado da qualidade geral do código. Você pode se cadastrar como administrador e acessar a dashboard, onde é possível: criar, editar e remover itens à venda na loja."
+                : "Fashion Kenzie is a collaborative project where I was assigned the role of Tech Lead. As a Tech Lead, I was responsible for overall code quality. Fashion Kenzie is an e-commerce platform that was built for a clothing store. You are able to sign up as an administrator and login into the dashboard, where you are able to: create, edit and remove items from the shop."
             }
             technologies={[
               "React.js",
               "TypeScript",
               "Tailwind CSS",
+              "Daisy UI",
               "React Libraries: React Router DOM, React Form, ZOD, Toastify, React Icons",
             ]}
             features={
@@ -66,13 +67,15 @@ export const Projects = () => {
             title="Dev Hub"
             description={
               translation
-                ? "Esta é uma plataforma fullstack que permite aos usuários se inscreverem e registrar as tecnologias que utilizam em seu trabalho, bem como seu nível de proficiência."
-                : "This is a fullstack platform that allows users to sign up and register the technologies they use for their work and how proficient they are at it."
+                ? "Dev Hub é uma plataforma fullstack que permite aos usuários se inscreverem e registrar as tecnologias que utilizam em seu trabalho, bem como seu nível de proficiência."
+                : "Dev Hub is a fullstack platform that allows users to sign up and register the technologies they use for their work and how proficient they are at it."
             }
             reverse={true}
             technologies={[
               "React.js",
+              "TypeScript",
               "Tailwind CSS",
+              "Daisy UI",
               "React Libraries: React Router DOM, React Form, ZOD, Toastify, React Icons",
             ]}
             features={
@@ -90,8 +93,8 @@ export const Projects = () => {
                     "Responsive design in all resolutions",
                   ]
             }
-            liveDemo="https://react-entrega-kenzie-hub-marcelino-gutierrez.vercel.app/"
-            repo="https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-kenzie-hub_marcelino-gutierrez"
+            liveDemo="https://dev-hub-marcelino-gutierrez.vercel.app/"
+            repo="https://github.com/Kenzie-Academy-Brasil-Developers/dev-hub_marcelino-gutierrez"
           />
         </div>
       </main>

@@ -81,11 +81,11 @@ export const Home = () => {
         <>
           {translation ? (
             <span className="md:col-span-5 py-4 md:py-0 text-white/70">
-              Olá! Eu sou <strong>Marcelino Gutierrez</strong>, um desenvolvedor
-              web full-stack. Tenho aprendido desenvolvimento web desde o final
-              de 2022 e comecei a aprender a programar na Kenzie Academy em
-              fevereiro de 2023. Tenho feito um progresso incrível e adquiri um
-              sólido entendimento de
+              Olá! Me chamo <strong>Marcelino Gutierrez</strong>, sou
+              desenvolvedor web full-stack. Tenho aprendido desenvolvimento web
+              desde o final de 2022 e comecei a aprender a programar na Kenzie
+              Academy em fevereiro de 2023. Tenho feito um progresso incrível e
+              adquiri um sólido entendimento de
               <strong> HTML, CSS, JavaScript/TypeScript, SQL</strong> e
               frameworks/bibliotecas como
               <strong> React.js e Tailwind CSS</strong>. Acredito que minha
