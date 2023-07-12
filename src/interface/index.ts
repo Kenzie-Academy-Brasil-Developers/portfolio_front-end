@@ -3,6 +3,7 @@ import { TContactFormValues } from "../schema/ContactFormSchema";
 
 export interface IStackCardProps {
   children: ReactNode;
+  name: string;
 }
 
 export interface IPageTitleProps {

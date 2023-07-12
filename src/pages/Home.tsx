@@ -88,9 +88,9 @@ export const Home = () => {
               adquiri um sólido entendimento de
               <strong> HTML, CSS, JavaScript/TypeScript, SQL</strong> e
               frameworks/bibliotecas como
-              <strong> React.js e Tailwind CSS</strong>. Acredito que minha
-              rápida compreensão de novas tecnologias pode ser atribuída à minha
-              forte capacidade de desenvolvimento independente e minha
+              <strong> React.js, Next.js e Tailwind CSS</strong>. Acredito que
+              minha rápida compreensão de novas tecnologias pode ser atribuída à
+              minha forte capacidade de desenvolvimento independente e minha
               <strong> ética de trabalho</strong>. Estou genuinamente
               entusiasmado em expandir ainda mais minhas habilidades e
               conhecimento em desenvolvimento web.
@@ -104,9 +104,9 @@ export const Home = () => {
               solid understanding of
               <strong> HTML, CSS, JavaScript/TypeScript, SQL</strong>, and
               frameworks/libraries like
-              <strong> React.js and Tailwind CSS</strong>. I believe that my
-              quick grasp of new technologies can be attributed to my strong
-              ability for self-directed learning and my
+              <strong> React.js, Next.js and Tailwind CSS</strong>. I believe
+              that my quick grasp of new technologies can be attributed to my
+              strong ability for self-directed learning and my
               <strong> strong work ethic</strong>. As a highly
               <strong> motivated and disciplined</strong> individual, I am
               genuinely excited to further expand my skills and knowledge in web
