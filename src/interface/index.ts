@@ -1,8 +1,8 @@
-import { Dispatch, ReactNode } from "react";
+import { Dispatch, ElementType, ReactNode } from "react";
 import { TContactFormValues } from "../schema/ContactFormSchema";
 
 export interface IStackCardProps {
-  children: ReactNode;
+  Icon: ElementType;
   name: string;
 }
 
@@ -39,6 +39,7 @@ export interface IMainContext {
   sendEmail: (formData: TContactFormValues) => Promise<void>;
   translation: boolean;
   setTranslation: Dispatch<React.SetStateAction<boolean>>;
+  stacks: IStackCardProps[];
 }
 
 export interface IMainContextProps {

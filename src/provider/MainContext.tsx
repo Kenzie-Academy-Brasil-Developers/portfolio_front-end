@@ -4,6 +4,21 @@ import { TContactFormValues } from "../schema/ContactFormSchema";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import { IMainContext, IMainContextProps } from "../interface";
+import {
+  BiLogoCss3,
+  BiLogoGit,
+  BiLogoGithub,
+  BiLogoHtml5,
+  BiLogoJavascript,
+  BiLogoNodejs,
+  BiLogoPostgresql,
+  BiLogoReact,
+  BiLogoSass,
+  BiLogoTailwindCss,
+  BiLogoTypescript,
+} from "react-icons/bi";
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiExpress } from "react-icons/si";
 
 export const MainContext = createContext({} as IMainContext);
 
@@ -39,6 +54,61 @@ export const ContextProvider = ({ children }: IMainContextProps) => {
     }
   };
 
+  const stacks = [
+    {
+      name: "HTML",
+      Icon: BiLogoHtml5,
+    },
+    {
+      name: "CSS",
+      Icon: BiLogoCss3,
+    },
+    {
+      name: "JavaScript",
+      Icon: BiLogoJavascript,
+    },
+    {
+      name: "TypeScript",
+      Icon: BiLogoTypescript,
+    },
+    {
+      name: "React.js",
+      Icon: BiLogoReact,
+    },
+    {
+      name: "Next.js",
+      Icon: TbBrandNextjs,
+    },
+    {
+      name: "Node.js",
+      Icon: BiLogoNodejs,
+    },
+    {
+      name: "Express.js",
+      Icon: SiExpress,
+    },
+    {
+      name: "PostgreSQL",
+      Icon: BiLogoPostgresql,
+    },
+    {
+      name: "Tailwind CSS",
+      Icon: BiLogoTailwindCss,
+    },
+    {
+      name: "SASS",
+      Icon: BiLogoSass,
+    },
+    {
+      name: "Git",
+      Icon: BiLogoGit,
+    },
+    {
+      name: "Github",
+      Icon: BiLogoGithub,
+    },
+  ];
+
   const [translation, setTranslation] = useState<boolean>(true);
 
   return (
@@ -51,6 +121,7 @@ export const ContextProvider = ({ children }: IMainContextProps) => {
           toggleDrawer,
           translation,
           setTranslation,
+          stacks,
         }}
       >
         {children}
