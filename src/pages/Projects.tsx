@@ -32,7 +32,7 @@ export const Projects = () => {
             reverse={false}
             description={
               translation
-                ? "Fashion Kenzie é uma plataforma e-commerce para uma loja de roupas que foi desenvolvida como um projeto colaborativo, no qual eu desenvolvi o papel de Tech Lead, encarregado da qualidade geral do código. Você pode se cadastrar como administrador e acessar a dashboard, onde é possível: criar, editar e remover itens à venda na loja."
+                ? "Fashion Kenzie é uma plataforma e-commerce para uma loja de roupas que foi desenvolvida como um projeto colaborativo, no qual eu atuei como Tech Lead, encarregado da qualidade geral do código. Você pode se cadastrar como administrador e acessar a dashboard, onde é possível: criar, editar e remover itens à venda na loja."
                 : "Fashion Kenzie is a collaborative project where I was assigned the role of Tech Lead. As a Tech Lead, I was responsible for overall code quality. Fashion Kenzie is an e-commerce platform that was built for a clothing store. You are able to sign up as an administrator and login into the dashboard, where you are able to: create, edit and remove items from the shop."
             }
             technologies={[
