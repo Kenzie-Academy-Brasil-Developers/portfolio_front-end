@@ -27,9 +27,51 @@ export const Projects = () => {
       <main>
         <div className="flex flex-col gap-20">
           <ProjectCard
+            imgSource="https://i.ibb.co/27bfPLj/project3.jpg"
+            title="Dev Movies"
+            description={
+              translation
+                ? "Dev Movies é uma plataforma fullstack que permite aos usuários se inscreverem e publicarem avaliações de filmes na própria plataforma, assim como as avaliações de outros usuários. Existe a possibilidade de criar, editar e excluir avaliações."
+                : "Dev Movies is a full-stack platform that allows users to sign up and post movie reviews on the platform itself, as well as view reviews from other users. There's also the option to create, edit, and delete reviews."
+            }
+            reverse={false}
+            technologies={[
+              "TypeScript",
+              "Next.js",
+              "Zustand",
+              "Tailwind CSS",
+              "Tailwind Variants",
+              "Daisy UI",
+              "Other Libraries: React Hook Form, ZOD, Toastify, React Icons",
+            ]}
+            features={
+              translation
+                ? [
+                    "Uso de API REST, CRUD",
+                    "Proteção de rotas, autenticação automática",
+                    "Validação dinâmica de formulários",
+                    "Design responsivo em todas as resoluções",
+                    "Criação dinâmica de metadata para indexação de páginas",
+                    "Uso de livraria de gerenciamento de estado",
+                    "Uso de livraria de variáveis de estilização, promovendo a escalabilidade do código",
+                  ]
+                : [
+                    "Usage of REST API, CRUD",
+                    "Route protection, auto-login",
+                    "Dynamic form validation",
+                    "Responsive design in all resolutions",
+                    "Dynamic metadata generation for page indexing",
+                    "Usage of state management library (Zustand)",
+                    "Usage of style variants library, enhancing code scalability (Tailwind Variants)",
+                  ]
+            }
+            liveDemo="https://dev-movies-rouge.vercel.app/"
+            repo="https://github.com/guchierrez/dev-movies"
+          />
+          <ProjectCard
             imgSource="https://i.ibb.co/RQd3mdh/fashionkenzie.jpg"
             title="Fashion Kenzie"
-            reverse={false}
+            reverse
             description={
               translation
                 ? "Fashion Kenzie é uma plataforma e-commerce para uma loja de roupas que foi desenvolvida como um projeto colaborativo, no qual eu atuei como Tech Lead, encarregado da qualidade geral do código. Você pode se cadastrar como administrador e acessar a dashboard, onde é possível: criar, editar e remover itens à venda na loja."
@@ -70,7 +112,7 @@ export const Projects = () => {
                 ? "Dev Hub é uma plataforma fullstack que permite aos usuários se inscreverem e registrar as tecnologias que utilizam em seu trabalho, bem como seu nível de proficiência."
                 : "Dev Hub is a fullstack platform that allows users to sign up and register the technologies they use for their work and how proficient they are at it."
             }
-            reverse={true}
+            reverse={false}
             technologies={[
               "React.js",
               "TypeScript",
