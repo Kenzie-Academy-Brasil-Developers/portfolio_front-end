@@ -5,10 +5,9 @@ import { SiLinkedin } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
 import { FooterIcon } from "../components/FooterIcon";
 import { ContactForm } from "../components/ContactForm";
-import { Link } from "react-router-dom";
-import { BiArrowBack } from "react-icons/bi";
 import { useState, useEffect, useContext } from "react";
 import { MainContext } from "../provider/MainContext";
+import { ReturnButton } from "../components/ReturnButton";
 
 export function Contact() {
   const { translation } = useContext(MainContext);
@@ -28,27 +27,21 @@ export function Contact() {
         loading ? "opacity-0 select-none " : "transition-all duration-300"
       } min-h-screen grid md:grid-cols-2 grid-cols-1 bg-[#1c1c1c] rounded-sm w-full relative`}
     >
-      <div className="bg-primary relative flex flex-col h-screen">
+      <div className="relative flex flex-col h-screen bg-primary">
         <Lottie
-          className="absolute top-1/2 right-2/3 translate-x-2/3 -translate-y-1/2 sm:w-1/2 w-full"
+          className="absolute w-full -translate-y-1/2 top-1/2 right-2/3 translate-x-2/3 sm:w-1/2"
           animationData={Coding}
         ></Lottie>
-        <h3 className=" uppercase tracking-widest select-none text-center text-lg text-primary-content bottom-10 absolute right-1/2 translate-x-1/2">
+        <h3 className="absolute text-lg tracking-widest text-center uppercase translate-x-1/2 select-none  text-primary-content bottom-10 right-1/2">
           {translation
             ? "Entre em contato! Vamos expandir o seu negócio juntos."
             : "Get in touch! Let's expand your business together."}
         </h3>
       </div>
 
-      <div className="w-5/6 h-screen justify-center flex m-auto relative">
-        <Link
-          to="/"
-          className="flex items-center gap-2 text-primary uppercase tracking-widest absolute top-[5%] left-0"
-        >
-          <BiArrowBack />
-          {translation ? "Voltar" : "Return"}
-        </Link>
-        <ul className="absolute bottom-20 md:bottom-10 right-1/2 translate-x-1/2 flex gap-4">
+      <div className="relative flex justify-center w-5/6 h-screen m-auto">
+        <ReturnButton />
+        <ul className="absolute flex gap-4 translate-x-1/2 bottom-20 md:bottom-10 right-1/2">
           <FooterIcon link="https://wa.me/5541991012722">
             <SiWhatsapp className="text-2xl" />
           </FooterIcon>
