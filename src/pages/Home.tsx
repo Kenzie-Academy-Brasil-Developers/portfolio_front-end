@@ -86,7 +86,7 @@ export const Home = () => {
               Olá! Me chamo <strong>Marcelino Gutierrez</strong>, possuo
               conhecimentos em <strong> JavaScript, C#</strong> e tecnologias
               avançadas para o front-end como
-              <strong> Angular, Next.js e Tailwind CSS.</strong> Também estou
+              <strong> Angular, React.js e Tailwind CSS.</strong> Também estou
               familiarizado com frameworks de back-end como o
               <strong> Express, ASP.NET</strong> e a gestão de bancos de dados
               utilizando <strong> PostgreSQL e MongoDB.</strong> Minha
@@ -101,7 +101,7 @@ export const Home = () => {
               Hello! I am <strong>Marcelino Gutierrez</strong>, a web developer
               based in Brazil. I'm skilled in <strong> JavaScript, C# </strong>
               and the latest front-end tech like
-              <strong> Angular, Next.js and Tailwind CSS.</strong> I'm also
+              <strong> Angular, React.js and Tailwind CSS.</strong> I'm also
               familiar with back-end frameworks like
               <strong> Express, ASP.NET</strong> and database management using
               <strong> PostgreSQL and MongoDB.</strong> My experience includes
