@@ -32,7 +32,7 @@ export const Projects = () => {
             description={
               translation
                 ? "Dev Movies é uma plataforma fullstack que permite aos usuários se inscreverem e publicarem suas avaliações de filmes. Também podem ver as avaliações de outros usuários assim como criar, editar e excluir suas próprias avaliações."
-                : "Dev Movies is a full-stack platform that allows users to sign up and post their own movie reviews on the platform, as well as view reviews from other users. You are able to create, edit, and delete reviews."
+                : "Dev Movies is a full-stack platform that allows users to sign up and post their own reviews, as well as view reviews from other users. You are able to create, edit, and delete reviews."
             }
             reverse={false}
             technologies={[

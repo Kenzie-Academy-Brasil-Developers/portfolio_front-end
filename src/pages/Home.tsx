@@ -23,11 +23,13 @@ export const Home = () => {
           : "transition-all duration-1000"
       } mx-auto w-5/6 flex flex-col gap-12 py-10`}
     >
-      <main className="translate-y-3 grid md:grid-cols-2 gap-10 items-center">
+      <main className="grid items-center gap-10 translate-y-3 md:grid-cols-2">
         <div className="flex flex-col gap-4 ">
           <HeroDivider>
-            <span className="font-marlinge uppercase text-primary">
-              Marcelino Gutiérrez
+            <span className="uppercase font-marlinge text-primary">
+              {translation
+                ? "Desenvolvedor Web Fullstack"
+                : "Fullstack Web Developer"}
             </span>
             <h1 className="text-5xl font-bold">
               {translation
@@ -44,7 +46,7 @@ export const Home = () => {
             <div className="flex gap-4">
               <Link
                 to="/contact"
-                className="btn btn-primary tracking-widest rounded-none w-fit transition-all duration-300"
+                className="tracking-widest transition-all duration-300 rounded-none btn btn-primary w-fit"
               >
                 {translation ? "Contato" : "Contact"}
               </Link>
@@ -55,7 +57,7 @@ export const Home = () => {
                     ? "https://drive.google.com/file/d/1GaO3vxTRBT2-ROKLYQRjXUyRdLHm3K27/view?usp=sharing"
                     : "https://drive.google.com/file/d/1t3fzR-pV0FMBRi1BzNYaFHZdF7k5k9M2/view?usp=sharing"
                 }
-                className="inline-flex tracking-widest btn btn-outline rounded-none w-fit transition-all duration-300"
+                className="inline-flex tracking-widest transition-all duration-300 rounded-none btn btn-outline w-fit"
               >
                 {translation ? "Currículo" : "Resumee"}
               </a>
@@ -63,54 +65,51 @@ export const Home = () => {
           </HeroDivider>
         </div>
         <div className="relative mx-auto">
-          <div className="rounded-full overflow-hidden">
+          <div className="overflow-hidden rounded-full">
             <img
-              className="hover:scale-110 transition-all duration-1000 w-96"
+              className="transition-all duration-1000 hover:scale-110 w-96"
               src="https://i.ibb.co/GpMbgKz/IMG-0165.jpg"
             />
           </div>
-          <span className="font-marlinge absolute bg-primary shadow-lg px-14 p-2 sm:p-4 text-primary-content font-bold text-xl sm:text-3xl bottom-0 transition-all duration-1000">
+          <span className="absolute bottom-0 p-2 text-xl font-bold transition-all duration-1000 shadow-lg font-marlinge bg-primary px-14 sm:p-4 text-primary-content sm:text-3xl">
             Marcelino
           </span>
         </div>
       </main>
-      <section className="col-span-2 grid grid-cols-1 md:grid-cols-7 md:gap-10 gap-3">
+      <section className="grid grid-cols-1 col-span-2 gap-3 md:grid-cols-7 md:gap-10">
         <h2 className="text-5xl font-bold md:col-span-2">
           {translation ? "Sobre mim" : "About me"}
         </h2>
         <>
           {translation ? (
-            <span className="md:col-span-5 py-4 md:py-0 text-white/70">
-              Olá! Me chamo <strong>Marcelino Gutierrez</strong>, sou
-              desenvolvedor web full-stack. Tenho aprendido desenvolvimento web
-              desde o final de 2022 e comecei a aprender a programar na Kenzie
-              Academy em fevereiro de 2023. Tenho feito um progresso incrível e
-              adquiri um sólido entendimento de
-              <strong> HTML, CSS, JavaScript/TypeScript, SQL</strong> e
-              frameworks/bibliotecas como
-              <strong> React.js, Next.js e Tailwind CSS</strong>. Acredito que
-              minha rápida compreensão de novas tecnologias pode ser atribuída à
-              minha forte capacidade de desenvolvimento independente e minha
-              <strong> ética de trabalho</strong>. Estou genuinamente
-              entusiasmado em expandir ainda mais minhas habilidades e
-              conhecimento em desenvolvimento web.
+            <span className="py-4 leading-6 tracking-wide md:col-span-5 md:py-0 text-white/70">
+              Olá! Me chamo <strong>Marcelino Gutierrez</strong>, possuo
+              conhecimentos em <strong> JavaScript, C#</strong> e tecnologias
+              avançadas para o front-end como
+              <strong> Angular, Next.js e Tailwind CSS.</strong> Também estou
+              familiarizado com frameworks de back-end como o
+              <strong> Express, ASP.NET</strong> e a gestão de bancos de dados
+              utilizando <strong> PostgreSQL e MongoDB.</strong> Minha
+              experiência inclui projetos individuais e em equipe, demonstrando
+              minha capacidade de criar soluções inovadoras. Além disso, confio
+              na minha aprendizagem autodirigida, que me mantém em constante
+              aprimoramento. Vamos nos conectar e discutir como podemos
+              contribuir para o seu time.
             </span>
           ) : (
-            <span className="md:col-span-5 py-4 md:py-0 text-white/70">
+            <span className="py-4 leading-6 tracking-wide md:col-span-5 md:py-0 text-white/70">
               Hello! I am <strong>Marcelino Gutierrez</strong>, a web developer
-              based in Brazil. I have been learning web development since the
-              end of 2022 and started learning programming at Kenzie Academy in
-              February 2023. I have made incredible progress and have gained a
-              solid understanding of
-              <strong> HTML, CSS, JavaScript/TypeScript, SQL</strong>, and
-              frameworks/libraries like
-              <strong> React.js, Next.js and Tailwind CSS</strong>. I believe
-              that my quick grasp of new technologies can be attributed to my
-              strong ability for self-directed learning and my
-              <strong> strong work ethic</strong>. As a highly
-              <strong> motivated and disciplined</strong> individual, I am
-              genuinely excited to further expand my skills and knowledge in web
-              development.
+              based in Brazil. I'm skilled in <strong> JavaScript, C# </strong>
+              and the latest front-end tech like
+              <strong> Angular, Next.js and Tailwind CSS.</strong> I'm also
+              familiar with back-end frameworks like
+              <strong> Express, ASP.NET</strong> and database management using
+              <strong> PostgreSQL and MongoDB.</strong> My experience includes
+              solo and team projects, showcasing my ability to create innovative
+              coding solutions. Plus, I'm confident in my self-directed
+              learning, which keeps me growing and improving constantly. Let's
+              connect and discuss how I can bring my skills to benefit your
+              team.
             </span>
           )}
         </>

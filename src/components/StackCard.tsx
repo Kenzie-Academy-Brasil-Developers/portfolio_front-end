@@ -5,9 +5,9 @@ import { IStackCardProps } from "../interface";
 export const StackCard = ({ Icon, name }: IStackCardProps) => {
   return (
     <Tilt>
-      <div className="tooltip tooltip-primary tracking-widest" data-tip={name}>
-        <div className="p-5 border-white/30 border-2 rounded-none flex flex-col justify-center gap-3 items-center hover:bg-primary hover:text-primary-content hover:border-primary transition-all duration-300">
-          <Icon className=" text-8xl" />
+      <div className="tracking-widest tooltip tooltip-primary" data-tip={name}>
+        <div className="flex flex-col items-center justify-center gap-3 p-5 transition-all duration-300 border-2 rounded-none border-white/30 hover:bg-primary hover:text-primary-content hover:border-primary">
+          <Icon className="w-24 h-24" />
         </div>
       </div>
     </Tilt>

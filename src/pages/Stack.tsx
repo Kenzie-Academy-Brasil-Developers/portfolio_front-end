@@ -25,9 +25,13 @@ export const Stack = () => {
     >
       <PageTitle title={translation ? "Tecnologias" : "Technologies"} />
       <main>
-        <div className="flex flex-wrap gap-5 sm:gap-10 mx-auto justify-center">
+        <div className="flex flex-wrap justify-center gap-5 mx-auto sm:gap-10">
           {stacks.map((stack) => (
-            <StackCard Icon={stack.Icon} name={stack.name} />
+            <StackCard
+              key={crypto.randomUUID()}
+              Icon={stack.Icon}
+              name={stack.name}
+            />
           ))}
         </div>
       </main>

@@ -5,20 +5,20 @@ import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import { IMainContext, IMainContextProps } from "../interface";
 import {
+  BiLogoAngular,
+  BiLogoAws,
   BiLogoCss3,
-  BiLogoGit,
-  BiLogoGithub,
   BiLogoHtml5,
   BiLogoJavascript,
-  BiLogoNodejs,
+  BiLogoMongodb,
   BiLogoPostgresql,
   BiLogoReact,
-  BiLogoSass,
   BiLogoTailwindCss,
   BiLogoTypescript,
 } from "react-icons/bi";
 import { TbBrandNextjs } from "react-icons/tb";
-import { SiExpress } from "react-icons/si";
+import { SiCsharp, SiExpress } from "react-icons/si";
+import { Icon } from "../components/Icon";
 
 export const MainContext = createContext({} as IMainContext);
 
@@ -64,6 +64,10 @@ export const ContextProvider = ({ children }: IMainContextProps) => {
       Icon: BiLogoCss3,
     },
     {
+      name: "Tailwind CSS",
+      Icon: BiLogoTailwindCss,
+    },
+    {
       name: "JavaScript",
       Icon: BiLogoJavascript,
     },
@@ -76,36 +80,36 @@ export const ContextProvider = ({ children }: IMainContextProps) => {
       Icon: BiLogoReact,
     },
     {
-      name: "Next.js",
-      Icon: TbBrandNextjs,
+      name: "Angular",
+      Icon: BiLogoAngular,
     },
     {
-      name: "Node.js",
-      Icon: BiLogoNodejs,
+      name: "Next.js",
+      Icon: TbBrandNextjs,
     },
     {
       name: "Express.js",
       Icon: SiExpress,
     },
     {
+      name: "C#",
+      Icon: SiCsharp,
+    },
+    {
+      name: "ASP.NET Core",
+      Icon: Icon,
+    },
+    {
       name: "PostgreSQL",
       Icon: BiLogoPostgresql,
     },
     {
-      name: "Tailwind CSS",
-      Icon: BiLogoTailwindCss,
+      name: "MongoDB",
+      Icon: BiLogoMongodb,
     },
     {
-      name: "SASS",
-      Icon: BiLogoSass,
-    },
-    {
-      name: "Git",
-      Icon: BiLogoGit,
-    },
-    {
-      name: "Github",
-      Icon: BiLogoGithub,
+      name: "AWS",
+      Icon: BiLogoAws,
     },
   ];
 
