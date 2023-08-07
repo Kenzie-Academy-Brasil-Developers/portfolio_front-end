@@ -88,7 +88,7 @@ export const Home = () => {
               avançadas para o front-end como
               <strong> Angular, React.js e Tailwind CSS.</strong> Também estou
               familiarizado com frameworks de back-end como o
-              <strong> Express, ASP.NET</strong> e a gestão de bancos de dados
+              <strong> Node.js, ASP.NET</strong> e a gestão de bancos de dados
               utilizando <strong> PostgreSQL e MongoDB.</strong> Minha
               experiência inclui projetos individuais e em equipe, demonstrando
               minha capacidade de criar soluções inovadoras. Além disso, confio
@@ -103,7 +103,7 @@ export const Home = () => {
               and the latest front-end tech like
               <strong> Angular, React.js and Tailwind CSS.</strong> I'm also
               familiar with back-end frameworks like
-              <strong> Express, ASP.NET</strong> and database management using
+              <strong> Node.js, ASP.NET</strong> and database management using
               <strong> PostgreSQL and MongoDB.</strong> My experience includes
               solo and team projects, showcasing my ability to create innovative
               coding solutions. Plus, I'm confident in my self-directed
