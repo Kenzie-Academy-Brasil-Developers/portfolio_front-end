@@ -9,6 +9,8 @@ export const Home = () => {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
+    window.scroll(0, 0);
+
     const timeout = setTimeout(() => {
       setLoading(false);
     }, 200);
