@@ -86,11 +86,11 @@ export const Home = () => {
           {translation ? (
             <span className="py-4 leading-6 tracking-wide md:col-span-5 md:py-0 text-white/70">
               Olá! Me chamo <strong>Marcelino Gutierrez</strong>, possuo
-              conhecimentos em <strong> JavaScript, C#</strong> e tecnologias
+              conhecimentos em <strong> JavaScript</strong> e tecnologias
               avançadas para o front-end como
               <strong> Angular, React.js e Tailwind CSS.</strong> Também estou
               familiarizado com frameworks de back-end como o
-              <strong> Node.js, ASP.NET</strong> e a gestão de bancos de dados
+              <strong> Node.js </strong> e a gestão de bancos de dados
               utilizando <strong> PostgreSQL e MongoDB.</strong> Minha
               experiência inclui projetos individuais e em equipe, demonstrando
               minha capacidade de criar soluções inovadoras. Além disso, confio
@@ -101,11 +101,11 @@ export const Home = () => {
           ) : (
             <span className="py-4 leading-6 tracking-wide md:col-span-5 md:py-0 text-white/70">
               Hello! I am <strong>Marcelino Gutierrez</strong>, a web developer
-              based in Brazil. I'm skilled in <strong> JavaScript, C# </strong>
+              based in Brazil. I'm skilled in <strong> JavaScript </strong>
               and the latest front-end tech like
               <strong> Angular, React.js and Tailwind CSS.</strong> I'm also
               familiar with back-end frameworks like
-              <strong> Node.js, ASP.NET</strong> and database management using
+              <strong> Node.js </strong> and database management using
               <strong> PostgreSQL and MongoDB.</strong> My experience includes
               solo and team projects, showcasing my ability to create innovative
               coding solutions. Plus, I'm confident in my self-directed

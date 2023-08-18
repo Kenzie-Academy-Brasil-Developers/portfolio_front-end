@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { useRef, useState } from "react";
 import { createContext } from "react";
 import { TContactFormValues } from "../schema/ContactFormSchema";
@@ -17,8 +18,7 @@ import {
   BiLogoTypescript,
 } from "react-icons/bi";
 import { TbBrandNextjs } from "react-icons/tb";
-import { SiCsharp, SiExpress } from "react-icons/si";
-import { Icon } from "../components/Icon";
+import { SiExpress, SiNodedotjs } from "react-icons/si";
 
 export const MainContext = createContext({} as IMainContext);
 
@@ -88,16 +88,12 @@ export const ContextProvider = ({ children }: IMainContextProps) => {
       Icon: TbBrandNextjs,
     },
     {
+      name: "Node.js",
+      Icon: SiNodedotjs,
+    },
+    {
       name: "Express.js",
       Icon: SiExpress,
-    },
-    {
-      name: "C#",
-      Icon: SiCsharp,
-    },
-    {
-      name: "ASP.NET Core",
-      Icon: Icon,
     },
     {
       name: "PostgreSQL",
@@ -107,10 +103,10 @@ export const ContextProvider = ({ children }: IMainContextProps) => {
       name: "MongoDB",
       Icon: BiLogoMongodb,
     },
-    {
-      name: "AWS",
-      Icon: BiLogoAws,
-    },
+    // {
+    //   name: "AWS",
+    //   Icon: BiLogoAws,
+    // },
   ];
 
   const [translation, setTranslation] = useState<boolean>(true);
