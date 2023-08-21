@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import { IMainContext, IMainContextProps } from "../interface";
 import {
   BiLogoAngular,
-  BiLogoAws,
+  // BiLogoAws,
   BiLogoCss3,
   BiLogoHtml5,
   BiLogoJavascript,
