@@ -7,9 +7,11 @@ import { toast } from "react-toastify";
 import { IMainContext, IMainContextProps } from "../interface";
 import {
   BiLogoAngular,
+  BiLogoBootstrap,
   // BiLogoAws,
   BiLogoCss3,
   BiLogoHtml5,
+  BiLogoJava,
   BiLogoJavascript,
   BiLogoMongodb,
   BiLogoPostgresql,
@@ -64,8 +66,16 @@ export const ContextProvider = ({ children }: IMainContextProps) => {
       Icon: BiLogoCss3,
     },
     {
+      name: "Bootstrap",
+      Icon: BiLogoBootstrap,
+    },
+    {
       name: "Tailwind CSS",
       Icon: BiLogoTailwindCss,
+    },
+    {
+      name: "Java",
+      Icon: BiLogoJava,
     },
     {
       name: "JavaScript",
@@ -99,10 +109,10 @@ export const ContextProvider = ({ children }: IMainContextProps) => {
       name: "PostgreSQL",
       Icon: BiLogoPostgresql,
     },
-    {
-      name: "MongoDB",
-      Icon: BiLogoMongodb,
-    },
+    // {
+    //   name: "MongoDB",
+    //   Icon: BiLogoMongodb,
+    // },
     // {
     //   name: "AWS",
     //   Icon: BiLogoAws,

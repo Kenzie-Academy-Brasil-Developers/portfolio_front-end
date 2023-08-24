@@ -86,7 +86,7 @@ export const Home = () => {
           {translation ? (
             <span className="py-4 leading-6 tracking-wide md:col-span-5 md:py-0 text-white/70">
               Olá! Me chamo <strong>Marcelino Gutierrez</strong>, possuo
-              conhecimentos em <strong> JavaScript</strong> e tecnologias
+              conhecimentos em <strong> JavaScript, Java</strong> e tecnologias
               avançadas para o front-end como
               <strong> Angular, React.js e Tailwind CSS.</strong> Também estou
               familiarizado com frameworks de back-end como o
@@ -101,7 +101,8 @@ export const Home = () => {
           ) : (
             <span className="py-4 leading-6 tracking-wide md:col-span-5 md:py-0 text-white/70">
               Hello! I am <strong>Marcelino Gutierrez</strong>, a web developer
-              based in Brazil. I'm skilled in <strong> JavaScript </strong>
+              based in Brazil. I'm skilled in
+              <strong> JavaScript, Java </strong>
               and the latest front-end tech like
               <strong> Angular, React.js and Tailwind CSS.</strong> I'm also
               familiar with back-end frameworks like
