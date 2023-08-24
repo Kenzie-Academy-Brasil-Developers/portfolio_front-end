@@ -13,7 +13,7 @@ import {
   BiLogoHtml5,
   BiLogoJava,
   BiLogoJavascript,
-  BiLogoMongodb,
+  // BiLogoMongodb,
   BiLogoPostgresql,
   BiLogoReact,
   BiLogoTailwindCss,
