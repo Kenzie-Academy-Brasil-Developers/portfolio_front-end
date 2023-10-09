@@ -8,14 +8,16 @@ import { IMainContext, IMainContextProps } from "../interface";
 import {
   BiLogoAngular,
   BiLogoBootstrap,
-  // BiLogoAws,
   BiLogoCss3,
+  BiLogoDjango,
   BiLogoHtml5,
   BiLogoJava,
   BiLogoJavascript,
-  // BiLogoMongodb,
+  BiLogoMongodb,
   BiLogoPostgresql,
+  BiLogoPython,
   BiLogoReact,
+  BiLogoSpringBoot,
   BiLogoTailwindCss,
   BiLogoTypescript,
 } from "react-icons/bi";
@@ -78,6 +80,18 @@ export const ContextProvider = ({ children }: IMainContextProps) => {
       Icon: BiLogoJava,
     },
     {
+        name: "Spring Boot",
+        Icon: BiLogoSpringBoot,
+      },
+      {
+        name: "Python",
+        Icon: BiLogoPython,
+      },
+      {
+        name: "Django",
+        Icon: BiLogoDjango,
+      },
+    {
       name: "JavaScript",
       Icon: BiLogoJavascript,
     },
@@ -109,14 +123,10 @@ export const ContextProvider = ({ children }: IMainContextProps) => {
       name: "PostgreSQL",
       Icon: BiLogoPostgresql,
     },
-    // {
-    //   name: "MongoDB",
-    //   Icon: BiLogoMongodb,
-    // },
-    // {
-    //   name: "AWS",
-    //   Icon: BiLogoAws,
-    // },
+    {
+      name: "MongoDB",
+      Icon: BiLogoMongodb,
+    },
   ];
 
   const [translation, setTranslation] = useState<boolean>(true);

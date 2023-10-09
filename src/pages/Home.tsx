@@ -40,7 +40,7 @@ export const Home = () => {
             </h1>
           </HeroDivider>
           <HeroDivider>
-            <p className="py-4 text-white/70">
+            <p className="py-4 font-thin leading-7 text-white/70">
               {translation
                 ? "Conectando pessoas por meio do código, criando experiências web cativantes e evoluindo no mundo do desenvolvimento front-end."
                 : "Bridging people through code, crafting captivating web experiences while leveling up in the world of front-end development."}
@@ -84,7 +84,7 @@ export const Home = () => {
         </h2>
         <>
           {translation ? (
-            <span className="py-4 leading-6 tracking-wide md:col-span-5 md:py-0 text-white/70">
+            <span className="py-4 font-thin leading-7 tracking-wide md:col-span-5 md:py-0 text-white/70">
               Olá! Me chamo <strong>Marcelino Gutierrez</strong>, possuo
               conhecimentos em <strong> JavaScript, Java</strong> e tecnologias
               avançadas para o front-end como
@@ -99,7 +99,7 @@ export const Home = () => {
               contribuir para o seu time.
             </span>
           ) : (
-            <span className="py-4 leading-6 tracking-wide md:col-span-5 md:py-0 text-white/70">
+            <span className="py-4 font-thin leading-7 tracking-wide md:col-span-5 md:py-0 text-white/70">
               Hello! I am <strong>Marcelino Gutierrez</strong>, a web developer
               based in Brazil. I'm skilled in
               <strong> JavaScript, Java </strong>
