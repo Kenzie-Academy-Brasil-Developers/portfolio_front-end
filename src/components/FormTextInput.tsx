@@ -1,3 +1,4 @@
+import React from "react";
 import { UseFormRegister, FieldErrors } from "react-hook-form";
 
 type InputName = "name" | "email";
@@ -24,7 +25,7 @@ export const FormTextInput = ({
           errors[inputName]
             ? "border-red-500 focus:border-red-500"
             : "focus:border-primary border-white/30"
-        }   outline-none focus:outline-none placeholder:tracking-widest placeholder-white/30 input input-lg bg-base-200 border-0 border-b-4   w-full rounded-none transition-all duration-500`}
+        }   outline-none focus:outline-none placeholder:tracking-widest uppercase placeholder-white/30 input input-lg bg-base-200 border-0 border-b-4   w-full rounded-none transition-all duration-500`}
         type={inputType}
         placeholder={inputPlaceholder}
         autoComplete="current-password"

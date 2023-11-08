@@ -9,6 +9,7 @@ import {
 } from "../schema/ContactFormSchema";
 import { FormTextareaInput } from "./FormTextareaInput";
 import { ContactFormSchemaPt } from "../schema/ContactFormSchemaPt";
+import React from "react";
 
 export const ContactForm = () => {
   const { sendEmail, translation } = useContext(MainContext);

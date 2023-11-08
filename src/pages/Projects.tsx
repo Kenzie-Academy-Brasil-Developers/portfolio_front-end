@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { PageTitle } from "../components/PageTitle";
 import { ProjectCard } from "../components/ProjectCard";
 import { MainContext } from "../provider/MainContext";
+import React from "react";
 
 export const Projects = () => {
   const { translation } = useContext(MainContext);
@@ -27,6 +28,40 @@ export const Projects = () => {
       <main>
         <div className="flex flex-col gap-20">
           <ProjectCard
+            imgSource="https://i.ibb.co/9g1Qsn6/asdasdasd.jpg"
+            title="Meisters"
+            description={
+              translation
+                ? "Meisters é uma plataforma fullstack, com banco de dados integrado que permite aos usuários gerenciarem sua lista de tarefas."
+                : "Meisters is a full-stack platform, with an integrated database that allows users to manage a to do list."
+            }
+            reverse={false}
+            technologies={[
+              "TypeScript",
+              "React.js",
+              "Java",
+              "Spring Boot",
+              "Tailwind CSS",
+              "Daisy UI",
+              "PostgreSQL",
+            ]}
+            features={
+              translation
+                ? [
+                    "API REST, CRUD",
+                    "Validação dinâmica de formulários",
+                    "Design responsivo em todas as resoluções",
+                  ]
+                : [
+                    "REST API, CRUD",
+                    "Dynamic form validation",
+                    "Responsive design in all resolutions",
+                  ]
+            }
+            liveDemo="https://meisters-test-marcelino-gutierrez.vercel.app/"
+            repo="https://github.com/guchierrez/meisters-back-end"
+          />
+          <ProjectCard
             imgSource="https://i.ibb.co/27bfPLj/project3.jpg"
             title="Dev Movies"
             description={
@@ -34,7 +69,7 @@ export const Projects = () => {
                 ? "Dev Movies é uma plataforma fullstack que permite aos usuários se inscreverem e publicarem suas avaliações de filmes. Também podem ver as avaliações de outros usuários assim como criar, editar e excluir suas próprias avaliações."
                 : "Dev Movies is a full-stack platform that allows users to sign up and post their own reviews, as well as view reviews from other users. You are able to create, edit, and delete reviews."
             }
-            reverse={false}
+            reverse
             technologies={[
               "TypeScript",
               "Next.js",
@@ -47,7 +82,7 @@ export const Projects = () => {
             features={
               translation
                 ? [
-                    "Uso de API REST, CRUD",
+                    "API REST, CRUD",
                     "Proteção de rotas, autenticação automática",
                     "Validação dinâmica de formulários",
                     "Design responsivo em todas as resoluções",
@@ -56,7 +91,7 @@ export const Projects = () => {
                     "Uso de livraria de variáveis de estilização, promovendo a escalabilidade do código",
                   ]
                 : [
-                    "Usage of REST API, CRUD",
+                    "REST API, CRUD",
                     "Route protection, auto-login",
                     "Dynamic form validation",
                     "Responsive design in all resolutions",
@@ -70,8 +105,8 @@ export const Projects = () => {
           />
           <ProjectCard
             imgSource="https://i.ibb.co/RQd3mdh/fashionkenzie.jpg"
+            reverse={false}
             title="Fashion Kenzie"
-            reverse
             description={
               translation
                 ? "Fashion Kenzie é uma plataforma e-commerce para uma loja de roupas que foi desenvolvida como um projeto colaborativo, no qual eu atuei como Tech Lead, encarregado da qualidade geral do código. Você pode se cadastrar como administrador e acessar a dashboard, onde é possível: criar, editar e remover itens à venda na loja."
@@ -87,14 +122,14 @@ export const Projects = () => {
             features={
               translation
                 ? [
-                    "Uso da API REST, CRUD",
+                    "API REST, CRUD",
                     "Funcionalidade completa de loja e carrinho",
                     "Proteção de rotas",
                     "Validação dinâmica de formulários",
                     "Design responsivo em todas as resoluções",
                   ]
                 : [
-                    "Usage of REST API, CRUD",
+                    "REST API, CRUD",
                     "Complete store and cart functionality",
                     "Route protection",
                     "Dynamic form validation",
@@ -112,7 +147,7 @@ export const Projects = () => {
                 ? "Dev Hub é uma plataforma fullstack que permite aos usuários se inscreverem e registrar as tecnologias que utilizam em seu trabalho, bem como seu nível de proficiência."
                 : "Dev Hub is a fullstack platform that allows users to sign up and register the technologies they use for their work and how proficient they are at it."
             }
-            reverse={false}
+            reverse
             technologies={[
               "React.js",
               "TypeScript",
@@ -123,13 +158,13 @@ export const Projects = () => {
             features={
               translation
                 ? [
-                    "Uso de API REST, CRUD",
+                    "API REST, CRUD",
                     "Proteção de rotas, autenticação automática",
                     "Validação dinâmica de formulários",
                     "Design responsivo em todas as resoluções",
                   ]
                 : [
-                    "Usage of REST API, CRUD",
+                    "REST API, CRUD",
                     "Route protection, auto-login",
                     "Dynamic form validation",
                     "Responsive design in all resolutions",

@@ -1,3 +1,4 @@
+import React from "react";
 import { UseFormRegister, FieldErrors } from "react-hook-form";
 
 type InputName = "message";
@@ -22,7 +23,7 @@ export const FormTextareaInput = ({
           errors[inputName]
             ? "border-red-500 focus:border-red-500"
             : "focus:border-primary border-white/30"
-        } outline-none focus:outline-none placeholder:tracking-widest placeholder-white/30 textarea textarea-lg   resize-none bg-base-200 border-0 border-b-4 w-full rounded-none transition-all duration-500`}
+        } outline-none focus:outline-none uppercase placeholder:tracking-widest placeholder-white/30 textarea textarea-lg resize-none bg-base-200 border-0 border-b-4 w-full rounded-none transition-all duration-500`}
         placeholder={inputPlaceholder}
         autoComplete="current-password"
         {...register(inputName)}
