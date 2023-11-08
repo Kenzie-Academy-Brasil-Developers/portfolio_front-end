@@ -7,13 +7,11 @@ import { toast } from "react-toastify";
 import { IMainContext, IMainContextProps } from "../interface";
 import {
   BiLogoAngular,
-  BiLogoBootstrap,
   BiLogoCss3,
   BiLogoDjango,
   BiLogoHtml5,
   BiLogoJava,
   BiLogoJavascript,
-  BiLogoMongodb,
   BiLogoPostgresql,
   BiLogoPython,
   BiLogoReact,
@@ -21,9 +19,7 @@ import {
   BiLogoTailwindCss,
   BiLogoTypescript,
 } from "react-icons/bi";
-import { TbBrandNextjs } from "react-icons/tb";
 import { SiExpress, SiNodedotjs } from "react-icons/si";
-import React from "react";
 
 export const MainContext = createContext({} as IMainContext);
 

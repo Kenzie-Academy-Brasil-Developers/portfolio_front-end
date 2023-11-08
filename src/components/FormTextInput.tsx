@@ -1,4 +1,3 @@
-import React from "react";
 import { UseFormRegister, FieldErrors } from "react-hook-form";
 
 type InputName = "name" | "email";

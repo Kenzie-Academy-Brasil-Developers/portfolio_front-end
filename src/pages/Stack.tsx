@@ -2,7 +2,6 @@ import { useState, useEffect, useContext } from "react";
 import { PageTitle } from "../components/PageTitle";
 import { MainContext } from "../provider/MainContext";
 import { StackCard } from "../components/StackCard";
-import React from "react";
 
 export const Stack = () => {
   const { translation, stacks } = useContext(MainContext);

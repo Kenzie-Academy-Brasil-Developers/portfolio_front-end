@@ -2,7 +2,6 @@ import { useState, useEffect, useContext } from "react";
 import { HeroDivider } from "../components/HeroDivider";
 import { Link } from "react-router-dom";
 import { MainContext } from "../provider/MainContext";
-import React from "react";
 
 export const Home = () => {
   const { translation } = useContext(MainContext);

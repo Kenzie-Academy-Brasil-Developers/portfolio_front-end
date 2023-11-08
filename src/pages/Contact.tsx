@@ -8,7 +8,6 @@ import { ContactForm } from "../components/ContactForm";
 import { useState, useEffect, useContext } from "react";
 import { MainContext } from "../provider/MainContext";
 import { ReturnButton } from "../components/ReturnButton";
-import React from "react";
 
 export function Contact() {
   const { translation } = useContext(MainContext);
