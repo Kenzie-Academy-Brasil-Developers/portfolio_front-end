@@ -86,44 +86,45 @@ export const Home = () => {
           {translation ? (
             <span className="py-4 font-thin leading-7 tracking-wide md:col-span-5 md:py-0 text-white/70">
               Olá! Me chamo{" "}
-              <strong className="text-white">Marcelino Gutierrez</strong>,
-              possuo conhecimentos em{" "}
-              <strong className="text-white"> JavaScript, Java, Python</strong>{" "}
-              e tecnologias avançadas para o front-end como
-              <strong className="text-white">
+              <strong className="font-bold">Marcelino Gutierrez</strong>, possuo
+              conhecimentos em{" "}
+              <strong className="font-bold"> JavaScript, Java, Python</strong> e
+              tecnologias avançadas para o front-end como
+              <strong className="font-bold">
                 {" "}
                 Angular, React.js e Tailwind CSS.
               </strong>{" "}
               Também estou familiarizado com frameworks de back-end como o
-              <strong className="text-white">
+              <strong className="font-bold">
                 {" "}
                 Node.js, Django, Spring Boot{" "}
               </strong>{" "}
               e a gestão de bancos de dados utilizando{" "}
-              <strong> PostgreSQL.</strong> Minha experiência inclui projetos
-              individuais e em equipe, demonstrando minha capacidade de criar
-              soluções inovadoras. Além disso, confio na minha aprendizagem
-              autodirigida, que me mantém em constante aprimoramento. Vamos nos
-              conectar e discutir como podemos contribuir para o seu time.
+              <strong className="font-bold"> PostgreSQL.</strong> Minha
+              experiência inclui projetos individuais e em equipe, demonstrando
+              minha capacidade de criar soluções inovadoras. Além disso, confio
+              na minha aprendizagem autodirigida, que me mantém em constante
+              aprimoramento. Vamos nos conectar e discutir como podemos
+              contribuir para o seu time.
             </span>
           ) : (
             <span className="py-4 font-thin leading-7 tracking-wide md:col-span-5 md:py-0 text-white/70">
               Hello! I am{" "}
-              <strong className="text-white">Marcelino Gutierrez</strong>, a web
+              <strong className="font-bold">Marcelino Gutierrez</strong>, a web
               developer based in Brazil. I'm skilled in
-              <strong className="text-white"> JavaScript, Java, Python </strong>
+              <strong className="font-bold"> JavaScript, Java, Python </strong>
               and the latest front-end tech like
-              <strong className="text-white">
+              <strong className="font-bold">
                 {" "}
                 Angular, React.js and Tailwind CSS.
               </strong>{" "}
               I'm also familiar with back-end frameworks like
-              <strong className="text-white">
+              <strong className="font-bold">
                 {" "}
                 Node.js, Django, Spring Boot{" "}
               </strong>{" "}
               and database management using
-              <strong className="text-white"> PostgreSQL.</strong> My experience
+              <strong className="font-bold"> PostgreSQL.</strong> My experience
               includes solo and team projects, showcasing my ability to create
               innovative coding solutions. Plus, I'm confident in my
               self-directed learning, which keeps me growing and improving
